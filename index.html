@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="5到6个关键词" />
+	<meta name="description" content="这里是描述"/>
+
+	<link rel="shortcut icon" href="./public/img/ico_48.ico">
+	<link rel="stylesheet" type="text/css" href="./public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/froala_editor.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/froala_style.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/code_view.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/colors.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/emoticons.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/image_manager.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/image.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/line_breaker.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/table.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/char_counter.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/video.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/fullscreen.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/file.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/plugins/quick_insert.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/codemirror.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/pluge/froala_editor-2.2.4/css/themes/red.min.css">
+	<!--[if lt IE 9]>
+	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+
+	<title>froala_editor</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="edit">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	<script src="./public/js/jquery-2.1.1.min.js"></script>
+	<script src="./public/js/bootstrap.min.js"></script>
+
+	<script src="./public/pluge/froala_editor-2.2.4/js/froala_editor.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/codemirror.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/xml.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/align.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/code_beautifier.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/code_view.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/colors.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/draggable.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/emoticons.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/font_size.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/font_family.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/image.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/file.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/image_manager.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/line_breaker.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/link.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/lists.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/paragraph_format.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/paragraph_style.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/video.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/table.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/url.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/entities.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/char_counter.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/inline_style.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/save.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/fullscreen.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/quick_insert.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/plugins/quote.min.js"></script>
+	<script src="./public/pluge/froala_editor-2.2.4/js/languages/zh_cn.js"></script>
+	<script>
+		$(function(){
+			var toolbarButtons   = ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', 'insertHR', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html'];
+			var toolbarButtonsMD = ['fullscreen', 'bold', 'italic', 'underline', 'fontFamily', 'fontSize', 'color', 'paragraphStyle', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', 'insertHR', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', 'undo', 'redo', 'clearFormatting'];
+			var toolbarButtonsSM = ['fullscreen', 'bold', 'italic', 'underline', 'fontFamily', 'fontSize', 'insertLink', 'insertImage', 'insertTable', 'undo', 'redo'];
+			var toolbarButtonsXS = ['bold', 'italic', 'fontFamily', 'fontSize', 'undo', 'redo'];
+			$('#edit').froalaEditor({
+				charCounterCount       : true,//默认
+				charCounterMax         : -1,//默认
+				language                 : 'zh_cn',
+				saveInterval            : 0,//不自动保存，默认10000
+				theme                    : "red",
+				height                   : "300px",
+				toolbarBottom           : false,//默认
+				toolbarButtonsMD        : toolbarButtonsMD,
+				toolbarButtonsSM        : toolbarButtonsSM,
+				toolbarButtonsXS        : toolbarButtonsXS,
+				toolbarInline           : false,//true选中设置样式,默认false
+				imageUploadMethod       : 'POST',
+				imageUploadURL           : './lib/imgUpload.php',
+				//imageUploadParam         : 'upImg',
+				imageUploadParams        : {id: "edit"},
+				placeholderText          : '博客从此开始',
+
+
+			})
+		});
+	</script>
+</body>
+</html>
