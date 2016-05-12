@@ -4,25 +4,26 @@
  * User: wzb
  * Date: 2016/5/11
  * Time: 17:21
+ * description è¯¥ä¸Šä¼ æ–¹æ³•æ£€éªŒä¸è¶³ï¼Œè¯·æ•´åˆè‡ªå·±çš„ä¸Šä¼ æ–¹æ³•ï¼Œæˆ–ä½¿ç”¨repository => dowmloadé‡Œé¢çš„ä¸Šä¼ ä»£ç 
  */
-    // ÔÊÐíÉÏ´«µÄºó×ºÃû.
+    // å…è®¸ä¸Šä¼ çš„åŽç¼€å.
     $allowedExts = array("gif", "jpeg", "jpg", "png");
-    // »ñÈ¡ÉÏ´«Í¼Æ¬µÄÎÄ¼þÃû£¬ÒÔ.·Ö¸î
+    // èŽ·å–ä¸Šä¼ å›¾ç‰‡çš„æ–‡ä»¶åï¼Œä»¥.åˆ†å‰²
     $temp = explode(".", $_FILES["file"]["name"]);
-    // È¡ÉÏ´«ÎÄ¼þµÄºó×ºÃû
+    // å–ä¸Šä¼ æ–‡ä»¶çš„åŽç¼€å
     $extension = end($temp);
-    //Í¼Æ¬µÄmimeÔÚ±à¼­Æ÷ÖÐÒÑ¾­¼ì²é,ÔÚ·þÎñÆ÷¶ËÔÙ´Î¼ì²â
-    //ÃæÏò¹ý³Ì·½Ê½È¡³ömime
-    //FILEINFO_MIME_TYPE ×Ôphp5.3.0¿ÉÒÔÊ¹ÓÃ
-    //ÔÚÍøÂçÀï·¢ÏÖÏÂÃæ±¨´íÊ±£¬Çë´ò¿ªphp.iniµÄphp_fileinfoÀ©Õ¹£¬È»ºóÖØÆô·þÎñÆ÷
-    $finfo = new finfo(FILEINFO_MIME_TYPE);// ·µ»Ø mime ÀàÐÍ
+    //å›¾ç‰‡çš„mimeåœ¨ç¼–è¾‘å™¨ä¸­å·²ç»æ£€æŸ¥,åœ¨æœåŠ¡å™¨ç«¯å†æ¬¡æ£€æµ‹
+    //é¢å‘è¿‡ç¨‹æ–¹å¼å–å‡ºmime
+    //FILEINFO_MIME_TYPE è‡ªphp5.3.0å¯ä»¥ä½¿ç”¨
+    //åœ¨ç½‘ç»œé‡Œå‘çŽ°ä¸‹é¢æŠ¥é”™æ—¶ï¼Œè¯·æ‰“å¼€php.iniçš„php_fileinfoæ‰©å±•ï¼Œç„¶åŽé‡å¯æœåŠ¡å™¨
+    $finfo = new finfo(FILEINFO_MIME_TYPE);// è¿”å›ž mime ç±»åž‹
     $mime = $finfo->file($_FILES["file"]["tmp_name"]);
     if ((($mime == "image/gif")||($mime == "image/jpeg")||($mime == "image/pjpeg")||($mime == "image/x-png")||($mime == "image/png")) && in_array($extension, $allowedExts)) {
-        // Ê¹ÓÃÎ¢Ãë²¢Éú³É¹þÏ£Öµ£¬¹¹ÔìÎ¨Ò»ÎÄ¼þÃû
+        // ä½¿ç”¨å¾®ç§’å¹¶ç”Ÿæˆå“ˆå¸Œå€¼ï¼Œæž„é€ å”¯ä¸€æ–‡ä»¶å
         $name = sha1(microtime()) . "." . $extension;
-        //ÒÆ¶¯Í¼Æ¬µ½Ö¸¶¨Ä¿Â¼.
+        //ç§»åŠ¨å›¾ç‰‡åˆ°æŒ‡å®šç›®å½•.
         move_uploaded_file($_FILES["file"]["tmp_name"], "../uploads/" . $name);
-        //ÊµÀý»¯Ò»¸öÒ»°ãÀà
+        //å®žä¾‹åŒ–ä¸€ä¸ªä¸€èˆ¬ç±»
         $response = new StdClass;
         $response->link = "../edit_demo/uploads/" . $name;
         echo stripslashes(json_encode($response));
